@@ -1,5 +1,4 @@
 ---
 - hosts: oli-db-test
-  roles: 
+  roles:
     - arrow
-

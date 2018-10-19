@@ -1,7 +1,7 @@
 ---
 - name: Build Database Test VM
   hosts: oli-db-test
-  become: yes
+  become: true
   become_method: sudo
 
 - import_playbook: users.yml
@@ -10,4 +10,4 @@
 - import_playbook: mongodb.yml
 - import_playbook: elasticsearch.yml
 - import_playbook: influxdb.yml
-#- import_playbook: arrow.yml
+# - import_playbook: arrow.yml
