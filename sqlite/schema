@@ -1,0 +1,29 @@
+CREATE TABLE flux_id2rxn_id (
+        flux_id INTEGER NOT NULL,
+        rxn_id INTEGER NOT NULL,
+        PRIMARY KEY (flux_id, rxn_id),
+        FOREIGN KEY (flux_id) REFERENCES metabolism (id)
+);
+CREATE TABLE flux_id2time_id (
+        flux_id INTEGER NOT NULL,
+        time_id INTEGER NOT NULL,
+        PRIMARY KEY (flux_id, time_id),
+        FOREIGN KEY (flux_id) REFERENCES metabolism (id)
+);
+CREATE TABLE flux_id2wt_id (
+        flux_id INTEGER NOT NULL,
+        wt_id INTEGER NOT NULL,
+        PRIMARY KEY (flux_id, wt_id),
+        FOREIGN KEY (flux_id) REFERENCES metabolism (id)
+);
+CREATE TABLE metabolism (
+        id INTEGER NOT NULL,
+        flux REAL NOT NULL,
+        PRIMARY KEY (id)
+);
+CREATE TABLE reactions (
+        id INTEGER NOT NULL,
+        name TEXT NOT NULL,
+        PRIMARY KEY (id)
+);
+
