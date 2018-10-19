@@ -1,0 +1,4 @@
+---
+- hosts: oli-db-test
+  roles: 
+    - users

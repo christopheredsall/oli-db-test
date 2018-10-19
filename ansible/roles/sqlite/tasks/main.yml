@@ -1,0 +1,5 @@
+---
+- name: install sqlite
+  package:
+    name: sqlite
+    state: present

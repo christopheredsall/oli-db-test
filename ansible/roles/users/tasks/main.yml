@@ -1,0 +1,17 @@
+---
+- name: add users
+  user:
+    name: "{{ item.name }}"
+    append: yes
+    shell: /bin/bash
+    home: /home/{{ item.name }}
+    generate_ssh_key: yes
+    uid: "{{ item.uid|default(omit) }}"
+  loop: '{{ users }}'
+
+- name: set authorized SSH keys
+  authorized_key:
+    user: "{{ item.name }}"
+    state: present
+    key: "{{ item.key | default('') }}"
+  loop: "{{ users }}"

@@ -1,0 +1,5 @@
+---
+- name: Install InfluxDB
+  package:
+    name: influxdb
+    state: present

@@ -1,0 +1,3 @@
+[all]
+oli-db-test ansible_ssh_host=13.82.130.77
+

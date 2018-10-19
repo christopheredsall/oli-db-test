@@ -1,0 +1,10 @@
+---
+- name: Install Apache Arrow C++ Library
+  package:
+    name: libarrow-dev
+    state: present
+
+- name: Install Apache Arrow glib (C) Library
+  package:
+    name: libarrow-glib-dev
+    state: present
